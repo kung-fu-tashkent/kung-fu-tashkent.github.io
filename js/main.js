@@ -119,7 +119,10 @@ function backgroundPoints() {
 		requestAnimationFrame(update);
 	}
 }
-backgroundPoints();
+
+if(document.documentElement.clientWidth > 765) {
+	backgroundPoints();
+}
 
 function settingSizes() {
 	// Функция получает массив dom элементов
