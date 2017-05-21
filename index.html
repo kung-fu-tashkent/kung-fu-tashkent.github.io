@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +9,25 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/elastislide.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<script src="js/wow.min.js"></script>
+	<script>
+		if(document.documentElement.clientWidth > 768) {	
+			var style = document.createElement('link'),
+					script = document.createElement('script');
+
+			style.setAttribute('rel', 'stylesheet');
+			style.setAttribute('href', 'css/animate.css');
+			
+			script.src = 'js/wow.min.js';
+
+			document.head.appendChild(style);
+			document.head.appendChild(script);
+
+			window.addEventListener('load', function() {
+				new WOW().init();
+			});
+		}
+
+	</script>
 	<noscript>
 		<style>
 			.es-carousel ul{
@@ -35,6 +52,7 @@
 			</div>
 		</div>
 	</script>
+
 </head>
 <body>
 	<canvas id="canvas"></canvas>
@@ -347,10 +365,6 @@
 	<div class="moveTop">
 		<a href="#header"><img src="img/move-top.png"></a>
 	</div>
-
-	<script>
-		new WOW().init();
-	</script>
 	<script src="js/main.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jqTransition.js"></script>
