@@ -12,14 +12,19 @@
 	<script>
 		if(document.documentElement.clientWidth > 768) {	
 			var style = document.createElement('link'),
+					style2 = document.createElement('style'),
 					script = document.createElement('script');
 
 			style.setAttribute('rel', 'stylesheet');
 			style.setAttribute('href', 'css/animate.css');
 			
+			style2.innerHTML = '	.wow {visibility: hidden;}';
+			style2.id = 'visibilityStyle';
+
 			script.src = 'js/wow.min.js';
 
 			document.head.appendChild(style);
+			document.head.appendChild(style2);
 			document.head.appendChild(script);
 
 			window.addEventListener('load', function() {

@@ -180,7 +180,7 @@ function menuSettings() {
 				if(isMenuActive) {
 					isMenuActive = false;
 					humburgerInner.classList.remove('activeHumburger');
-					menu_main.style.height = '35px';
+					menu_main.style.height = '30px';
 				} else {
 					isMenuActive = true;
 					humburgerInner.className += ' activeHumburger';
