@@ -1,0 +1,27 @@
+.gallery {
+	@include container-fluid;
+
+	padding-bottom: 40px;
+	height: 740px;
+
+	@media screen and ($mobile-width) {
+		height: 485px;
+	}
+}
+
+/*.gallery_pictures {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}*/
+
+.gallery_modal {
+	z-index: 100000000;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .9);
+}

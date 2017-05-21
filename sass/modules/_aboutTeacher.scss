@@ -1,0 +1,51 @@
+.aboutTeacher {
+	background-color: #00AA8D;
+	color: #fff;
+	margin-top: 50px;
+	box-shadow: 0 0 15px #9a9999;
+}
+
+.aboutTeacher_wrap {
+	@include container-fluid;
+
+	padding: 25px 0;
+}
+
+.aboutTeacher_content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 25px 0;
+
+	@media screen and (max-width: 960px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.aboutTeacher_textInfo {
+	text-align: justify;
+	font-family: 'Open Sans';
+	width: 70%;
+	padding: 0 30px 10px 0;
+	box-sizing: border-box;
+
+	@media screen and (max-width: 960px) {
+		padding: 0 10px;
+		width: 90%;
+	}
+}
+
+.aboutTeacher_img {
+	width: 30%;
+	height: 400px;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: #ddd;
+	
+	@media screen and (max-width: 960px) {
+		order: -1;
+		width: 280px;
+		margin: 30px 0;
+	}
+}

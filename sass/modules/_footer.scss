@@ -1,0 +1,19 @@
+footer {
+	background-color: #363839;
+	color: #938D8E;
+	padding: 40px 0;
+	box-shadow: 0 0 15px #000;
+	text-shadow: 0 0 5px rgba(255, 255, 255, .19);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	
+	p {
+		font-size: .7em;
+	}
+
+	h1 {
+		font-size: 1.1em;
+	}
+}

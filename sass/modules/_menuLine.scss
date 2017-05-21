@@ -1,0 +1,143 @@
+.menu {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	
+	transition: .3s ease;
+
+	a {
+		color: white;
+		text-decoration: none;
+		position: relative;
+
+
+		&::after {
+			content: ' ';
+			display: inline-block;
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			right: 0;
+			height: 3px;
+			width: 0;
+			background-color: #fff;
+			margin: auto;
+			transition: .3s ease-in-out;
+		}
+	}
+
+	li {
+		margin: 5px 15px;
+	}
+
+	@media screen and ($mobile-width) {
+		flex-direction: column;
+		margin-right: 45px;
+		overflow: hidden;
+		/*height: 35px;*/
+	}
+}
+
+.menu a.menu_activeElement::after {
+	width: 100%;
+	@media screen and ($mobile-width) {
+		width: 0;
+	}
+}
+
+
+.menuLine {
+	padding: 20px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 99999999;
+
+	transition: .3s ease-in-out;
+
+	@media screen and ($mobile-width) {
+	}
+}
+
+.menuLine_dark {
+	background-color: rgba(0, 0, 0, .65);
+}
+
+.menuLine_wrap {
+	z-index: 99999999;
+	@include container-fluid;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+.logo h3{
+	margin-top: 0;
+	font-size: 1.4em;
+	color: #fff;
+	text-shadow: 0 0 5px rgba(255,255,255,.7);
+}
+
+@media screen and ($mobile-width) {
+	.humburger {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 45px;
+		height: 45px;
+		cursor: pointer;
+	}
+
+	.humburgerInner {
+		width: 30px;
+		height: 5px;
+		background-color: #fff;
+		border-radius: 4px;
+		margin: auto;
+		margin-top: 20px;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.humburgerInner::before {
+		display: block;
+		content: ' ';
+		position: absolute;
+		width: 30px;
+		height: 5px;
+		background-color: #fff;
+		border-radius: 4px;
+		margin-top: -10px;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.humburgerInner::after {
+		display: block;
+		content: ' ';
+		position: absolute;
+		width: 30px;
+		height: 5px;
+		background-color: #fff;
+		border-radius: 4px;
+		margin-top: 10px;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.activeHumburger {
+		transform: rotate(-45deg);
+	}
+
+	.activeHumburger::before {
+		width: 30px;
+		transform: rotate(-90deg);
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+	.activeHumburger::after {
+		opacity: 0;
+	}
+}
